@@ -4,7 +4,7 @@ class FailureModel {
   int? code;
   String? msgShow;
   String? msgSystem;
-  dynamic? error;
+  dynamic error;
   
   FailureModel({this.code, this.msgShow, this.msgSystem, this.error});
 

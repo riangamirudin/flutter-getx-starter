@@ -4,7 +4,11 @@ import 'package:flutter_getx_starter/core/utils/constants/value.dart';
 import 'package:flutter_getx_starter/core/utils/styles/color.dart';
 import 'package:flutter_getx_starter/core/utils/styles/text_style.dart';
 
-ThemeData themeData = ThemeData(
+/// Theme data untuk aplikasi
+/// 
+/// Menggunakan getter lazy untuk menghindari LateInitializationError
+/// Pastikan ScreenUtilInit sudah di-wrap sebelum menggunakan theme ini
+ThemeData get themeData => ThemeData(
   useMaterial3: true,
   fontFamily: "MyriadPro",
   primaryColor: primaryColor,
@@ -28,17 +32,20 @@ ThemeData themeData = ThemeData(
   elevatedButtonTheme: _elevatedButtonThemeData,
 );
 
-InputBorder _defaultInputBorder = OutlineInputBorder(
+/// Default input border
+InputBorder get _defaultInputBorder => OutlineInputBorder(
   borderSide: BorderSide.none,
   borderRadius: BorderRadius.circular(SMALL_UI),
 );
 
-InputBorder _defaultErrorBorder = OutlineInputBorder(
+/// Default error border
+InputBorder get _defaultErrorBorder => OutlineInputBorder(
   borderSide: BorderSide(color: dangerColor),
   borderRadius: BorderRadius.circular(SMALL_UI),
 );
 
-AppBarTheme _appBarTheme = AppBarTheme(
+/// App bar theme
+AppBarTheme get _appBarTheme => AppBarTheme(
   systemOverlayStyle: SystemUiOverlayStyle.light,
   backgroundColor: Colors.white,
   elevation: 0,
@@ -47,18 +54,21 @@ AppBarTheme _appBarTheme = AppBarTheme(
   actionsPadding: EdgeInsets.symmetric(horizontal: SMALL_UI),
 );
 
-TextButtonThemeData _textButtonThemeData = TextButtonThemeData(
+/// Text button theme
+TextButtonThemeData get _textButtonThemeData => TextButtonThemeData(
   style: TextButton.styleFrom(padding: EdgeInsets.all(SMALL_UI), overlayColor: primaryColor),
 );
 
-FilledButtonThemeData _filledButtonThemeData = FilledButtonThemeData(
+/// Filled button theme
+FilledButtonThemeData get _filledButtonThemeData => FilledButtonThemeData(
   style: FilledButton.styleFrom(
     padding: EdgeInsets.all(SMALL_UI),
     shape: RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(SMALL_RADIUS))),
   ),
 );
 
-ElevatedButtonThemeData _elevatedButtonThemeData = ElevatedButtonThemeData(
+/// Elevated button theme
+ElevatedButtonThemeData get _elevatedButtonThemeData => ElevatedButtonThemeData(
   style: FilledButton.styleFrom(
     padding: EdgeInsets.all(SMALL_UI),
     shape: RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(SMALL_RADIUS))),

@@ -1,4 +1,5 @@
 import 'package:dio/dio.dart';
+import 'package:flutter_getx_starter/core/config/app_config.dart';
 import 'package:flutter_getx_starter/core/network/interceptors/auth_interceptor.dart';
 import 'package:flutter_getx_starter/core/network/interceptors/basic_interceptor.dart';
 import 'package:flutter_getx_starter/core/network/models/basic_model.dart';
@@ -13,9 +14,9 @@ class DioClient {
   DioClient() {
     _dio = Dio(
       BaseOptions(
-        connectTimeout: Duration(milliseconds: 60000),
-        receiveTimeout: Duration(milliseconds: 60000),
-        baseUrl: '_BASE_URL_',
+        connectTimeout: Duration(milliseconds: AppConfig.connectTimeout),
+        receiveTimeout: Duration(milliseconds: AppConfig.receiveTimeout),
+        baseUrl: AppConfig.baseUrl,
         responseType: ResponseType.json,
         followRedirects: false,
         contentType: 'application/json',

@@ -17,6 +17,8 @@ dependencies:
   intl: ^0.20.2
   hive_ce: ^2.11.4
   hive_ce_flutter: ^2.3.2
+  package_info_plus: ^8.1.1
+  flutter_dotenv: ^5.1.0
   freezed_annotation: ^3.1.0
   json_annotation: ^4.9.0
   skeletonizer: ^2.1.0+1
