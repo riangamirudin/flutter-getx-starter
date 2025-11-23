@@ -26,7 +26,7 @@ class LoadingWidget extends StatelessWidget {
             child: CircularProgressIndicator(
               strokeWidth: 3,
               valueColor: AlwaysStoppedAnimation<Color>(
-                color ?? Theme.of(context).primaryColor,
+                color ?? Theme.of(context).colorScheme.primary,
               ),
             ),
           ),

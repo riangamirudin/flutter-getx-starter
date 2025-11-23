@@ -11,8 +11,15 @@ import 'package:flutter_getx_starter/core/utils/styles/text_style.dart';
 ThemeData get themeData => ThemeData(
   useMaterial3: true,
   fontFamily: "MyriadPro",
-  primaryColor: primaryColor,
-  primarySwatch: primaryColor,
+  colorScheme: ColorScheme.fromSeed(
+    seedColor: primaryColor,
+    primary: primaryColor,
+    onPrimary: Colors.white,
+    secondary: successColor,
+    onSecondary: Colors.white,
+    error: dangerColor,
+    onError: Colors.white,
+  ),
   visualDensity: VisualDensity.adaptivePlatformDensity,
   scaffoldBackgroundColor: Colors.white,
   inputDecorationTheme: InputDecorationThemeData(
